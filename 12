@@ -1,0 +1,19 @@
+12- [2 point]: write a python class for a particle, don’t forget the init, by giving Z and A. this class should have a method which gives the number of neutron back. Instantiate this class with an example.
+
+# 2021-10-29_ex02
+# Marcel Karbach, 4000031
+# Course: Applications of Accelerators
+
+class particle:
+    def __init__(self, name, mass, charge):
+        self.name = name
+        self.mass = mass
+        self.charge = charge
+        
+    def neutrons(self):
+        N = self.mass - self.charge
+        return N
+
+a = particle('Silver',108,47)
+
+print(a.name, 'has a mass number of', a.mass,', a proton number of', a.charge,'and a neutron number of', a.neutrons(), '.')
